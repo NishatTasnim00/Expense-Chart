@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 const Chart = () => {
-  const [num, setNum] = useState(3);
+  const [index, setIndex] = useState(3);
   const [chartData, setChartData] = useState([]);
   // console.log(num)/
   useEffect(() => {
-    fetch("expense.json")
+    fetch('expense-data.json')
+
       .then((res) => res.json())
       .then((data) => {
-        setChartData(data[num]);
+        setChartData(data[index]);
       })
       .catch((error) => {
         console.error("Fetch error:", error);
       });
-  }, [num]);
+  }, [index]);
+
   console.log(chartData);
   const handleFetchData = (n) => {
     setNum(n);
@@ -30,7 +32,7 @@ const Chart = () => {
 
   useEffect(() => {
     updateDonutChart();
-  }, [num, chartData]);
+  }, [index, chartData]);
 
   const updateDonutChart = () => {
     const personalPercentage = (personal / total) * 100;
@@ -58,10 +60,10 @@ const Chart = () => {
     <>
    
       <div className="flex gap-7 justify-center base-text">
-        <button onClick={() => handleFetchData(0)} className={`${num==0 ? "active": ""}`}>1M</button>
-        <button onClick={() => handleFetchData(1)} className={`${num==1 ? "active": ""}`}>6M</button>
-        <button onClick={() => handleFetchData(2)} className={`${num==2 ? "active": ""}`}>1Y</button>
-        <button onClick={() => handleFetchData(3)} className={`${num==3 ? "active": ""}`}>All Time</button>
+        <button onClick={() => handleFetchData(0)} className={`${index==0 ? "active": ""}`}>1M</button>
+        <button onClick={() => handleFetchData(1)} className={`${index==1 ? "active": ""}`}>6M</button>
+        <button onClick={() => handleFetchData(2)} className={`${index==2 ? "active": ""}`}>1Y</button>
+        <button onClick={() => handleFetchData(3)} className={`${index==3 ? "active": ""}`}>All Time</button>
       </div>
       <div>
         <div
