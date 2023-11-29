@@ -60,17 +60,17 @@ const Chart = () => {
     <>
    
       <div className="flex gap-7 justify-center base-text">
-        <button onClick={() => handleFetchData(0)} className={`${index==0 ? "active": ""}`}>1M</button>
-        <button onClick={() => handleFetchData(1)} className={`${index==1 ? "active": ""}`}>6M</button>
-        <button onClick={() => handleFetchData(2)} className={`${index==2 ? "active": ""}`}>1Y</button>
-        <button onClick={() => handleFetchData(3)} className={`${index==3 ? "active": ""}`}>All Time</button>
+        <button onClick={() => handleFetchData(0)} className={`${index==0 ? "active": "default"}`}>1M</button>
+        <button onClick={() => handleFetchData(1)} className={`${index==1 ? "active": "default"}`}>6M</button>
+        <button onClick={() => handleFetchData(2)} className={`${index==2 ? "active": "default"}`}>1Y</button>
+        <button onClick={() => handleFetchData(3)} className={`${index==3 ? "active": "default"}`}>All Time</button>
       </div>
       <div>
         <div
           id="donut-chart"
-          className="lg:h-80 lg:w-80 h-60 w-60 overflow-hidden my-5  mx-auto rounded-full relative"
+          className="md:h-80 md:w-80 h-60 w-60 overflow-hidden my-5  mx-auto rounded-full relative"
         >
-          <div className="lg:w-60 lg:h-60 h-40 w-40 flex justify-center items-center text-4xl font-bold  rounded-full bg-white overflow-hidden absolute top-10 left-10  ">
+          <div className="md:w-60 md:h-60 h-40 w-40 flex justify-center items-center text-4xl font-bold  rounded-full bg-white overflow-hidden absolute top-10 left-10  ">
             ${expense[0]}.
             <span className="text-shopping text-lg mt-[14px] font-normal">
               {expense[1]}

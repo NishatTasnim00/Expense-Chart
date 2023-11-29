@@ -9,8 +9,11 @@
     @apply text-gray-500 font-medium
 }
 .palette{
-   @apply h-2 w-4 lg:w-6 rounded-full mt-2
+   @apply h-2 w-4 md:w-6 rounded-full mt-2
 }
 .active{
     @apply text-personal
+}
+.default{
+    @apply hover:text-personal transition-all duration-300 ease-in-out
 }
