@@ -66,9 +66,9 @@ const Chart = () => {
       <div>
         <div
           id="donut-chart"
-          className="h-80 w-80 overflow-hidden my-5  mx-auto rounded-full relative"
+          className="lg:h-80 lg:w-80 h-60 w-60 overflow-hidden my-5  mx-auto rounded-full relative"
         >
-          <div className=" flex justify-center items-center text-4xl font-bold w-60 h-60 rounded-full bg-white overflow-hidden absolute top-10 left-10  ">
+          <div className="lg:w-60 lg:h-60 h-40 w-40 flex justify-center items-center text-4xl font-bold  rounded-full bg-white overflow-hidden absolute top-10 left-10  ">
             ${expense[0]}.
             <span className="text-shopping text-lg mt-[14px] font-normal">
               {expense[1]}

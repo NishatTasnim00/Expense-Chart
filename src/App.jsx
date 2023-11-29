@@ -4,7 +4,7 @@ import Chart from "./components/Chart";
 const App = () => {
   return (
     <>
-      <div className="min-h-screen bg-marionBerry sans-serif">
+      <div className="min-h-screen bg-marionBerry font-poppins">
         <div className="min-h-screen flex justify-center items-center ">
           <div>
             <h1 className="text-center font-bold text-xl lg:text-4xl text-white pb-5">
