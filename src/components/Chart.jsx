@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const Chart = () => {
   const [index, setIndex] = useState(3);
   const [chartData, setChartData] = useState([]);
-  // console.log(num)/
+  
   useEffect(() => {
     fetch('expense-data.json')
 
@@ -16,9 +16,9 @@ const Chart = () => {
       });
   }, [index]);
 
-  console.log(chartData);
+//   console.log(chartData);
   const handleFetchData = (n) => {
-    setNum(n);
+    setIndex(n);
   };
 
   const { personal, shopping, phone, other } = chartData;
