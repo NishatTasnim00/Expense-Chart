@@ -4,15 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: "#ffffff",
-        purple: "#3f3cbb",
-        midnight: "#121063",
+        personal: "#3f3cbb",
+        phone: "#75CE91",
+        shopping: "#9686FF",
+        other: "#121063",
         marionBerry: "#3D0693",
-        tahiti: "#3ab7bf",
-        silver: "#ecebff",
-        "bubble-gum": "#ff77e9",
-        bermuda: "#75CE91",
+        white: "#ffffff",
       },
+      fontFamily: { poppins: ["Poppins", "sans-serif"] },
     },
   },
   plugins: [],
