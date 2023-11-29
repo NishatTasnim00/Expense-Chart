@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.base-text{
+    @apply text-gray-500 font-medium
+}
